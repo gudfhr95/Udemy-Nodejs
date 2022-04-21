@@ -4,6 +4,12 @@ const fs = require("fs");
 const reuslts = [];
 
 fs.createReadStream("kepler_data.csv")
+  .pipe(
+    parse({
+      comment: "#",
+      columns: true,
+    })
+  )
   .on("data", (data) => {
     reuslts.push(data);
   })
@@ -14,4 +20,3 @@ fs.createReadStream("kepler_data.csv")
     console.log(reuslts);
     console.log("done");
   });
-// parse();
