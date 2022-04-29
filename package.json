@@ -19,6 +19,8 @@
   "homepage": "https://github.com/gudfhr95/nodejs-security-example#readme",
   "dependencies": {
     "express": "^4.18.0",
-    "helmet": "^5.0.2"
+    "helmet": "^5.0.2",
+    "passport": "^0.5.2",
+    "passport-google-oauth20": "^2.0.0"
   }
 }
